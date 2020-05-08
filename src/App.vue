@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
   </div>
 </template>
 
@@ -12,7 +16,7 @@ export default {
   }
 }
 </script>
-<style src='@/assets/css/normalize.css'></style>
+<style src='./assets/css/normalize.css'></style>
 <style scoped>
 #app {
   height: 100%;

@@ -1,0 +1,50 @@
+//globl transition css
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/*fade*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+// 动画效果-抽屉-[show-right]为从右侧移动出来或隐藏，[show-left]为从左侧移动出来或隐藏
+%tstion {transition: all 0.7s};
+$widthpx: -1000px;
+.show-right-enter-active,.show-right-leave-active{ @extend %tstion; }
+.show-right-enter,.show-right-leave-to{ right: $widthpx; }
+.show-right-enter-to,.show-right-leave{ right:0; }
+
+/deep/ .show-right-enter-active, /deep/ .show-right-leave-active{ @extend %tstion; }
+/deep/ .show-right-enter, /deep/ .show-right-leave-to{ @extend .show-right-enter; }
+/deep/ .show-right-enter-to, /deep/ .show-right-leave{ @extend .show-right-enter-to; }
+
+.show-left-enter-active,.show-left-leave-active{ @extend %tstion; }
+.show-left-enter,.show-left-leave-to{ left: $widthpx; }
+.show-left-enter-to,.show-left-leave{ left:0; }
+
+/deep/ .show-left-enter-active, /deep/ .show-left-leave-active{ @extend %tstion; }
+/deep/ .show-left-enter, /deep/ .show-left-leave-to{ @extend .show-left-enter; }
+/deep/ .show-left-enter-to, /deep/ .show-left-leave{ @extend .show-left-enter-to; }

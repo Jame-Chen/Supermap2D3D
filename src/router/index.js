@@ -4,7 +4,7 @@ Vue.use(Router);
 const router = new Router({
   // mode:'history',
   routes: [{
-      path: '/',
+      path: '/index',
       name: 'index',
       meta: {
         title: 'herox',
@@ -22,6 +22,26 @@ const router = new Router({
         keepAlive: false
       },
       component: resolve => require(['@/views/Test.vue'], resolve)
+    },
+    {
+      path: '/supermap3d',
+      name: 'supermap3d',
+      meta: {
+        title: '超图',
+        auth: false, //需要登录
+        keepAlive: false
+      },
+      component: resolve => require(['@/views/Supermap3D.vue'], resolve)
+    },
+    {
+      path: '/',
+      name: 'supermap2d',
+      meta: {
+        title: '超图2d',
+        auth: false, //需要登录
+        keepAlive: false
+      },
+      component: resolve => require(['@/views/Supermap2D.vue'], resolve)
     },
   ]
 });

@@ -357,6 +357,7 @@ audio {
   float: left;
   display: block;
   width: 1.42rem;
+  font-weight: bold;
 }
 
 .team li:nth-child(2),

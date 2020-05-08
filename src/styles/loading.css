@@ -1,0 +1,244 @@
+/*--------loading bar---------*/
+.spinner {
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  position: absolute ;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+  width: 16px;
+  height: 16px;
+  /*background-color: #67cf22;*/
+  background-color: #3498db;
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+}
+/*--------loading bar end---------*/
+/*-------slider --------------*/
+input[type=range] {
+  -webkit-appearance: none;
+  width: 300px;
+  border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]::-moz-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]::-ms-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 10px;
+  border-radius: 10px; /*将轨道设为圆角的*/
+  box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+input[type=range]::-moz-range-track  {
+  height: 10px;
+  border-radius: 10px; /*将轨道设为圆角的*/
+  box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  margin-top: -2px; /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+  box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  margin-top: -2px; /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+  box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+input[type=range]::-moz-range-progress {
+  background: linear-gradient(to right, #059CFA, white 100%, white);
+  height: 13px;
+  border-radius: 10px;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 300px;
+  border-radius: 10px;
+}
+
+input[type=range]::-ms-track {
+  height: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+  border-color: transparent; /*去除原有边框*/
+  color: transparent; /*去除轨道内的竖线*/
+}
+
+input[type=range]::-ms-thumb {
+  border: solid 0.125em rgba(205, 224, 230, 1.0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-top: -5px;
+  box-shadow: 0 .125em .125em #3b4547;
+}
+
+input[type=range]::-ms-fill-lower {
+  /*进度条已填充的部分*/
+  height: 10px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #059CFA, white 100%, white);
+}
+
+input[type=range]::-ms-fill-upper {
+  /*进度条未填充的部分*/
+  height: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: linear-gradient(to right, #059CFA, white 100%, white);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+/*-------slider end--------------*/
+/*-------bubble------------------*/
+.bubble {
+  text-align:left;
+  position: absolute;
+  padding: 0px 0px 10px 0px;
+  margin: 0;
+  background: #fff;
+  max-width : 330px;
+  max-height: 330px;
+}
+.bubble float{
+  right: 2%;
+  top: 2%;
+}
+.bubble:after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 50px;
+  border-width: 0 20px 100px 0px;
+  border-style: solid;
+  border-color: transparent #fff;
+  display: block;
+  width: 0;
+}
+/*-------bubble  end------------------*/

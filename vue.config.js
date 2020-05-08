@@ -1,4 +1,7 @@
 const path = require('path');
+function resolve (dir) {
+  return path.join(__dirname, dir);
+}
 module.exports = {
   // 基本路径
   baseUrl: process.env.NODE_ENV === 'production' ?
@@ -73,6 +76,24 @@ module.exports = {
     // },
     before: (app) => {}
   },
+  chainWebpack (config) {
+    // alias(路径简写)配置
+      config.resolve.alias.set('@', resolve('src')).set('excel', resolve('src/excel'))
+      // 配置默认svg 和 svg-sprite-loader处理 v1.10版
+      const svgRule = config.module.rule('svg') // 找到svg-loader
+      svgRule.uses.clear() // 清除已有的loader, 如果不这样做会添加在此loader之后
+      svgRule.include.add(resolve('src/icons/svg')) // 正则匹配指定目录
+      svgRule // 添加svg新的loader处理
+        .test(/\.svg$/)
+        .use('svg-sprite-loader')
+        .loader('svg-sprite-loader')
+        .options({
+          symbolId: 'icon-[name]'
+        })
+      const imagesRule = config.module.rule('images') // 找到images-loader
+      imagesRule.exclude.add(resolve('src/icons/svg')) // 排除指定目录
+      imagesRule.test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/) // 还原默认的svg处理
+    },
   // 第三方插件配置
   pluginOptions: {
     // ...

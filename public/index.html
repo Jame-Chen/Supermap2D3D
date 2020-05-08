@@ -7,8 +7,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link href="https://unpkg.com/animate.css@3.5.2/animate.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./Build/leaflet.css" />
+    <link rel="stylesheet" href="./Build/iclient-leaflet.min.css" />
+    <!-- <script src="./2d/dist/html2canvas.min.js"></script> -->
+
+    <link href="./Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script type="text/javascript" src="./Build/Cesium/Cesium.js" data-main="js/main"></script>
+    <script src="config.js"></script>
+    <script src="./layerConfig.js"></script>
+    <script src="./gumeiLayer.js"></script>
+    <script src="./gwLayer.js"></script>
+    <script type="text/javascript" src="./js/SuperMap-7.1-11828.js"></script>
+    <script type="text/javascript" src="./js/zh-CN.js"></script>
     <title></title>
-    <script>
+    <!-- <script>
         (function (doc, win) {
             var html = doc.getElementsByTagName("html")[0],
                 // orientationchange->手机屏幕转屏事件
@@ -36,7 +48,7 @@
             //doc.addEventListener("onload", setFontSize);
             doc.addEventListener("DOMContentLoaded", setFontSize);
         })(document, window);
-    </script>
+    </script> -->
 </head>
 
 <body>

@@ -1,0 +1,104 @@
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+
+
+$browser-default-font-size: 16px !default;//变量的值可以根据自己需求定义
+html {
+    font-size: $browser-default-font-size;
+}
+@function px2rem($px){//$px为需要转换的字号
+    @return $px / $browser-default-font-size * 1rem;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family:"微软雅黑", Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+  background: #fff;
+  color: #000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus{
+  outline: none;
+ }
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//main-container全局样式
+.app-main{
+  background: #FFF;
+}
+
+//演示DEMO需要的样式，后期直接删除
+.fs{
+  font-size: 24px;
+  color: #999999;
+  line-height: 48px;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-left: 11em;
+  &:before{
+    content: "这是测试Demo的页面：";
+    font-size: 24px;
+    color: #999999;
+    line-height: 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.el-menu--popup{min-width: 120px;}
