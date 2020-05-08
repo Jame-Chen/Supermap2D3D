@@ -47,7 +47,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "svg-sprite-loader": "^4.1.6",
-    "webpack-bundle-analyzer": "^2.13.1"
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "eslintConfig": {
     "root": true,
