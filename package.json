@@ -11,7 +11,7 @@
     "@supermap/iclient-classic": "^9.1.2",
     "@supermap/iclient-leaflet": "^10.0.1",
     "@supermap/vue-iclient-mapboxgl": "^10.0.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "nprogress": "0.2.0",
     "element-ui": "^2.13.0",
     "html2canvas": "^1.0.0-rc.3",
